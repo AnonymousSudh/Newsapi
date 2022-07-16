@@ -17,20 +17,20 @@ function Newsapi() {
         // console.log("1");
         const json_data = await data.json();
 
-        var array = []
-        const filterdata = json_data.articles.filter((elem, index) => {
-            // console.log(elem.title);
-            const string = elem.title
-            const result = string.includes("India's")
-            const result2 = string.includes("India")
-            // console.log(result);
-            if (result == true || result2 == true) {
-                array.push(elem)
-            }
-        })
-        console.log("3");
-        console.log(array);
-        setnews(array)
+        // var array = []
+        // const filterdata = json_data.articles.filter((elem, index) => {
+        //     // console.log(elem.title);
+        //     const string = elem.title
+        //     const result = string.includes("India's")
+        //     const result2 = string.includes("India")
+        //     // console.log(result);
+        //     if (result == true || result2 == true) {
+        //         array.push(elem)
+        //     }
+        // })
+        // console.log("3");
+        console.log(json_data.articles);
+        setnews(json_data.articles)
 
     }
 
