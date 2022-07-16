@@ -10,7 +10,7 @@ function Newsapi() {
 
     const fetchNews = async () => {
 
-        const url2 = `https://newsapi.org/v2/everything?q=agriculture&sortBy=popularity&apiKey=870ca578389942988efdd66eb6b53c42`
+        const url2 = `https://gnews.io/api/v4/top-headlines?q=farmer&lang=en&token=41e3c847093004b495a310bc932a56eb`
 
         // console.log("0");
         const data = await fetch(url2);
@@ -30,7 +30,7 @@ function Newsapi() {
         // })
         // console.log("3");
         // console.log(json_data);
-        setnews(json_data.status)
+        setnews(json_data.totalArticles)
 
     }
 
