@@ -29,8 +29,8 @@ function Newsapi() {
         //     }
         // })
         // console.log("3");
-        console.log(json_data.articles);
-        setnews(json_data.articles)
+        // console.log(json_data.articles);
+        setnews(json_data.articles[0])
 
     }
 
@@ -41,9 +41,9 @@ function Newsapi() {
 
     return (
         <>
-        {/* <h1>{news[0].title}</h1> */}    
+        <h1>{news.title}</h1>    
         
-            {news.map((val) => {
+            {/* {news.map((val) => {
                 return (
                     <>
                         <div className="newscard">
@@ -63,7 +63,7 @@ function Newsapi() {
 
                     </>
                 )
-            })}
+            })} */}
 
 
         </>
